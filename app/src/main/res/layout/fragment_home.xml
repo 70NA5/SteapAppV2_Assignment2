@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <!--    TODO-->
+    <!--    remove default text-->
+
+
+    <!--    TODO-->
+    <!--    create CircularProgressIndicator-->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="false"
+        app:indicatorColor="?attr/colorOnTertiaryContainer"
+        app:indicatorSize="304dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:trackColor="?attr/colorTertiaryContainer"
+        app:trackThickness="42dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutStepcounter"
+        android:layout_width="165dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="62dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/progressBar">
+
+        <TextView
+            android:id="@+id/twGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goalText" />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twCounter"
+            android:textSize="72sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/steps" />
+    </LinearLayout>
+
+
+    <!--    TODO-->
+    <!--    Create 3 textviews: one with the goal, one with the current count and one that sayd "steps" underneath it-->
+
+
+    <!--    TODO-->
+    <!--    Create button-->
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="?attr/colorSecondaryContainer"
+        android:text="@string/start_text"
+        android:textColor="?attr/colorOnSecondaryContainer"
+        android:textSize="20sp"
+        app:icon="@drawable/mdi_restart"
+        app:iconPadding="8dp"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="restartSteps"
+        />
+
+    <Button
+        android:id="@+id/countButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        android:onClick="countSteps"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
